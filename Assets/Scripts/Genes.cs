@@ -16,12 +16,10 @@ public class Genes : MonoBehaviour
     
     public void Mate(Gene[] genesMale, Gene [] genesFemale)
     {
-        if(genesMale == null || genesFemale == null)
+        genes = new Gene[number_of_behaviors];
+
+        if (genesMale == null || genesFemale == null)
         {
-            
-
-            genes = new Gene[number_of_behaviors];
-
             for (int i = 0; i < genes.Length; ++i)
             {
                 genes[i] = new Gene {oneHalf = (Allele)Random.Range(0, 9), otherHalf = (Allele)Random.Range(0, 9) };
@@ -29,7 +27,13 @@ public class Genes : MonoBehaviour
         }
         else
         {
-            //TODO
+            for (int i = 0; i < genes.Length; ++i)
+            {
+                genes[i] = new Gene {
+                    oneHalf = Random.Range(0, 2) == 0 ? genesMale[i].oneHalf : genesMale[i].otherHalf,
+                    otherHalf = Random.Range(0, 2) == 0 ? genesFemale[i].oneHalf : genesFemale[i].otherHalf
+                };
+            }
         }
 
         GetComponent<Renderer>().material.color = UpdateColor();

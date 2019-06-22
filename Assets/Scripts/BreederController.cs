@@ -5,7 +5,12 @@ using UnityEngine.UI;
 
 public class BreederController : MonoBehaviour
 {
+    public bool HasWarble { get { return hasWarble; } }
+    public Genes WarbleGenes { get; set; }
     public GameObject GeneUI;
+    public SpawnerController SpawnController;
+
+    private bool hasWarble = false;
     private GeneUIController ui;
     private CanvasGroup cg;
 
@@ -18,11 +23,16 @@ public class BreederController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         cg.alpha = 1f;
-        ui.ShowGenes(other.gameObject.GetComponent<Genes>().genes);
+        hasWarble = true;
+        WarbleGenes = other.gameObject.GetComponent<Genes>();
+        ui.ShowGenes(WarbleGenes.genes);
+        SpawnController.WarbleEnterExit();
     }
 
     private void OnTriggerExit(Collider other)
     {
         cg.alpha = 0f;
+        hasWarble = false;
+        SpawnController.WarbleEnterExit();
     }
 }
