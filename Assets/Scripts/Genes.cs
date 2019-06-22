@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Genes : MonoBehaviour
 {
-    private const int number_of_behaviors = 9;
+    private const int number_of_behaviors = 3;
     private const float color_step = 1f / (float)number_of_behaviors;
 
     public Gene[] genes;

@@ -17,14 +17,19 @@ public class ClickAndDrag : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance.Racing)
+            return;
+
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
         scanPos = transform.position;
         offset = scanPos - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
     private void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+        if (GameManager.Instance.Racing)
+            return;
 
+        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         rb.MovePosition(curPosition);
@@ -32,6 +37,9 @@ public class ClickAndDrag : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (GameManager.Instance.Racing)
+            return;
+
         scanPos = transform.position;
         rb.velocity = Vector3.zero;
     }
