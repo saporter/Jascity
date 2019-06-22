@@ -5,13 +5,16 @@ using UnityEngine;
 public class Genes : MonoBehaviour
 {
     private const int number_of_behaviors = 9;
-    private const float color_step = 255 / number_of_behaviors;
+    private const float color_step = 1f / (float)number_of_behaviors;
+
     public Gene[] genes;
+
+    private Renderer rend;
 
     private void Awake()
     {
+        rend = GetComponent<Renderer>();
         Mate(null, null);
-        
     }
     
     public void Mate(Gene[] genesMale, Gene [] genesFemale)
@@ -36,8 +39,7 @@ public class Genes : MonoBehaviour
             }
         }
 
-        GetComponent<Renderer>().material.color = UpdateColor();
-        
+        rend.material.color = UpdateColor();
     }
 
     private Color UpdateColor()
@@ -57,9 +59,9 @@ public class Genes : MonoBehaviour
                     g += color_step;
                     break;
                 case Allele.up:
-                    r -= color_step;
-                    g -= color_step;
-                    b -= color_step;
+                    //r -= color_step;
+                    //g -= color_step;
+                    //b -= color_step;
                     break;
                 case Allele.down:
                     b += color_step;
@@ -71,9 +73,9 @@ public class Genes : MonoBehaviour
                     g += color_step * 2;
                     break;
                 case Allele.upDom:
-                    r -= color_step * 2;
-                    g -= color_step * 2;
-                    b -= color_step * 2;
+                    //r -= color_step * 2;
+                    //g -= color_step * 2;
+                    //b -= color_step * 2;
                     break;
                 case Allele.downDom:
                     b += color_step * 2;
@@ -88,9 +90,9 @@ public class Genes : MonoBehaviour
                     g += color_step;
                     break;
                 case Allele.up:
-                    r -= color_step;
-                    g -= color_step;
-                    b -= color_step;
+                    //r -= color_step;
+                    //g -= color_step;
+                    //b -= color_step;
                     break;
                 case Allele.down:
                     b += color_step;
@@ -102,9 +104,9 @@ public class Genes : MonoBehaviour
                     g += color_step * 2;
                     break;
                 case Allele.upDom:
-                    r -= color_step * 2;
-                    g -= color_step * 2;
-                    b -= color_step * 2;
+                    //r -= color_step * 2;
+                    //g -= color_step * 2;
+                    //b -= color_step * 2;
                     break;
                 case Allele.downDom:
                     b += color_step * 2;
@@ -112,9 +114,9 @@ public class Genes : MonoBehaviour
             }
         }
 
-        r = r > 255 ? 255 : r < 0 ? 0 : r;
-        g = g > 255 ? 255 : g < 0 ? 0 : g;
-        b = r > 255 ? 255 : b < 0 ? 0 : b;
+        r = r > 1f ? 1f : r < 0 ? 0 : r;
+        g = g > 1f ? 1f : g < 0 ? 0 : g;
+        b = b > 1f ? 1f : b < 0 ? 0 : b;
         return new Color(r, g, b);
     }
 
