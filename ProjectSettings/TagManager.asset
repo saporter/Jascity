@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CameraViewTrigger
+  - Warble
+  - Predator
+  - Food
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - CollidesWarbleOnly
   - Warble
-  - Racing
+  - CollidesTrackOnly
   - Track
   - 
   - 

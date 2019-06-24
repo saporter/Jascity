@@ -19,10 +19,9 @@ public class RewardOnCollision : MonoBehaviour
         timer = GameManager.Instance.GetComponent<Timer>();
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject == GameManager.Instance.RacingWarble)
+        if (collision.gameObject == GameManager.Instance.RacingWarble)
         {
             if (Time.time - timeAwarded > 0.2f)
             {

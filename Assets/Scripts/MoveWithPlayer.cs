@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveWithPlayer : MonoBehaviour
 {
     public float Speed = 0.02f;
+    public bool Destructable = true;
 
     private bool inPlay = true;
     private Vector3 startPos;

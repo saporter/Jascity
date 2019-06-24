@@ -11,10 +11,9 @@ public class EndOnCollision : MonoBehaviour
         obstacle = GetComponent<MoveWithPlayer>();
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject == GameManager.Instance.RacingWarble)
+        if (collision.gameObject == GameManager.Instance.RacingWarble)
         {
             GameManager.Instance.ResetRace();
             obstacle.StopPlayingAndMoveToStart();

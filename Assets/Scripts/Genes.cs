@@ -25,7 +25,7 @@ public class Genes : MonoBehaviour
         {
             for (int i = 0; i < genes.Length; ++i)
             {
-                genes[i] = new Gene {oneHalf = (Allele)Random.Range(0, 9), otherHalf = (Allele)Random.Range(0, 9) };
+                genes[i] = new Gene {oneHalf = (Allele)Random.Range(0, 6), otherHalf = (Allele)Random.Range(0, 6) };
             }
         }
         else
@@ -52,63 +52,43 @@ public class Genes : MonoBehaviour
         {
             switch (genes[i].oneHalf)
             {
-                case Allele.left:
+                case Allele.shoot:
                     r += color_step;
                     break;
-                case Allele.right:
+                case Allele.avoid:
                     g += color_step;
                     break;
-                case Allele.up:
-                    //r -= color_step;
-                    //g -= color_step;
-                    //b -= color_step;
-                    break;
-                case Allele.down:
+                case Allele.tackle:
                     b += color_step;
                     break;
-                case Allele.leftDom:
+                case Allele.shootDominant:
                     r += color_step * 2;
                     break;
-                case Allele.rightDom:
+                case Allele.avoidDominant:
                     g += color_step * 2;
                     break;
-                case Allele.upDom:
-                    //r -= color_step * 2;
-                    //g -= color_step * 2;
-                    //b -= color_step * 2;
-                    break;
-                case Allele.downDom:
+                case Allele.tackleDominant:
                     b += color_step * 2;
                     break;
             }
             switch (genes[i].otherHalf)
             {
-                case Allele.left:
+                case Allele.shoot:
                     r += color_step;
                     break;
-                case Allele.right:
+                case Allele.avoid:
                     g += color_step;
                     break;
-                case Allele.up:
-                    //r -= color_step;
-                    //g -= color_step;
-                    //b -= color_step;
-                    break;
-                case Allele.down:
+                case Allele.tackle:
                     b += color_step;
                     break;
-                case Allele.leftDom:
+                case Allele.shootDominant:
                     r += color_step * 2;
                     break;
-                case Allele.rightDom:
+                case Allele.avoidDominant:
                     g += color_step * 2;
                     break;
-                case Allele.upDom:
-                    //r -= color_step * 2;
-                    //g -= color_step * 2;
-                    //b -= color_step * 2;
-                    break;
-                case Allele.downDom:
+                case Allele.tackleDominant:
                     b += color_step * 2;
                     break;
             }
@@ -139,14 +119,12 @@ public struct Gene
 public enum Allele
 {
     // Recessive alleles
-    left,
-    right,
-    up,
-    down,
+    shoot,
+    avoid,
+    tackle,
     
     // Dominant alleles
-    leftDom,
-    rightDom,
-    upDom,
-    downDom
+    shootDominant,
+    avoidDominant,
+    tackleDominant
 }

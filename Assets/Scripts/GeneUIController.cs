@@ -38,25 +38,22 @@ public class GeneUIController : MonoBehaviour
     {
         switch (allele)
         {
-            case Allele.leftDom:
+            case Allele.shootDominant:
                 return new ColorSprite { color = new Color(255f, 0f, 0f), sprite = Dominant };
-            case Allele.left:
+            case Allele.shoot:
                 return new ColorSprite { color = new Color(128f, 0f, 0f), sprite = Recessive };
-            case Allele.rightDom:
+            case Allele.avoidDominant:
                 return new ColorSprite { color = new Color(0f, 255f, 0f), sprite = Dominant };
-            case Allele.right:
+            case Allele.avoid:
                 return new ColorSprite { color = new Color(0f, 128f, 0f), sprite = Recessive };
-            case Allele.upDom:
-                return new ColorSprite { color = new Color(255f, 255f, 255f), sprite = Dominant };
-            case Allele.up:
-                return new ColorSprite { color = new Color(128f, 128f, 128f), sprite = Recessive };
-            case Allele.downDom:
+            case Allele.tackleDominant:
                 return new ColorSprite { color = new Color(0f, 0f, 255f), sprite = Dominant };
-            case Allele.down:
+            case Allele.tackle:
                 return new ColorSprite { color = new Color(0f, 0f, 128f), sprite = Recessive };
         }
 
         // Should never happen
+        Debug.LogWarning("Gene with no behavior created");
         return new ColorSprite { color = new Color(0f, 0f, 0f), sprite = Recessive };
     }
 }

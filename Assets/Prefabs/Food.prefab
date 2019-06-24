@@ -4767,7 +4767,7 @@ GameObject:
   - component: {fileID: 1487116061289346470}
   m_Layer: 11
   m_Name: Food
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4795,7 +4795,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2537717365982916499}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.4
@@ -4841,3 +4841,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99a1aea964d7ec4c823f5754477bff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Reward: 7

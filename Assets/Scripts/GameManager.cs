@@ -38,26 +38,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetRace()
-    {
-        if (!Racing)
-            return;
-
-        Racing = false;
-        transform.position = startPos;
-        transform.rotation = startRotation;
-        Camera.main.transform.position = startCameraPos;
-        RacingWarble.transform.position = startPos;
-        RacingWarble.transform.SetParent(null);
-        RacingWarble = null;
-        timer.StopTimer();
-        input.ActiveWarble = null;
-    }
-
     public void SetupRace(GameObject warble)
     {
         Racing = true;
         RacingWarble = warble;
+        RacingWarble.GetComponent<GeneBehaviorController>().enabled = true;
         RacingWarble.transform.SetParent(transform);
         StartCoroutine(MoveCameraToWarble());
     }
@@ -69,6 +54,23 @@ public class GameManager : MonoBehaviour
         timer.StartTimer();
         input.ActiveWarble = RacingWarble;
         StartCoroutine(RaceAroundTrack());
+    }
+
+    public void ResetRace()
+    {
+        if (!Racing)
+            return;
+
+        Racing = false;
+        transform.position = startPos;
+        transform.rotation = startRotation;
+        Camera.main.transform.position = startCameraPos;
+        RacingWarble.GetComponent<GeneBehaviorController>().enabled = false;
+        RacingWarble.transform.position = startPos;
+        RacingWarble.transform.SetParent(null);
+        RacingWarble = null;
+        timer.StopTimer();
+        input.ActiveWarble = null;
     }
 
     IEnumerator MoveCameraToWarble()
@@ -83,7 +85,6 @@ public class GameManager : MonoBehaviour
             
             yield return new WaitForSeconds(0.02f);
         }
-        Debug.Log("Done moving camera");
     }
 
     IEnumerator RaceAroundTrack()
