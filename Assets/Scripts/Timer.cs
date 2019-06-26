@@ -44,6 +44,11 @@ public class Timer : MonoBehaviour
         HelperTools.ToggleOff(cg);
     }
 
+    public void PauseTimer()
+    {
+        counting = false;
+    }
+
     IEnumerator Counting()
     {
         float minutes;
@@ -57,13 +62,13 @@ public class Timer : MonoBehaviour
             text.text = 
                 (minutes < 10 ? "0" + minutes.ToString() : minutes.ToString()) + 
                 ":" + 
-                (seconds < 10 ? "0" + Mathf.RoundToInt(seconds).ToString() : Mathf.RoundToInt(seconds).ToString());
+                (seconds < 10 ? "0" + Mathf.Floor(seconds).ToString() : Mathf.Floor(seconds).ToString());
 
-            if(TimeLeft > 5f && text.color != Color.black)
+            if(TimeLeft > 5f && text.color != Color.white)
             {
-                text.color = Color.black;
+                text.color = Color.white;
             }
-            else if(TimeLeft < 4.5f && text.color != Color.red)
+            else if(TimeLeft < 5f && text.color != Color.red)
             {
                 text.color = Color.red;
             }

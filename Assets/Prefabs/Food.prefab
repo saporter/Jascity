@@ -4829,6 +4829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.02
+  Destructable: 1
+  OutOfTheWay: {x: -1000, y: 1000, z: 0}
 --- !u!114 &1487116061289346470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4841,4 +4843,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99a1aea964d7ec4c823f5754477bff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Reward: 7
+  Reward: 20

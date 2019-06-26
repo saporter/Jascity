@@ -16,7 +16,6 @@ public class EndOnCollision : MonoBehaviour
         if (collision.gameObject == GameManager.Instance.RacingWarble)
         {
             GameManager.Instance.ResetRace();
-            obstacle.StopPlayingAndMoveToStart();
         }
     }
 }

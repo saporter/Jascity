@@ -62,15 +62,22 @@ public class GeneBehaviorController : MonoBehaviour
             atLeastOneDominant = true;
             ExecuteBehavior((int)gene.oneHalf % 3, closest);
         }
-        if ((int)gene.otherHalf > 2)
+        if ((int)gene.otherHalf > 2 && ((int)gene.oneHalf % 3 != (int)gene.otherHalf % 3 || !atLeastOneDominant))
         {
             atLeastOneDominant = true;
             ExecuteBehavior((int)gene.otherHalf % 3, closest);
         }
         else if(!atLeastOneDominant)
         {
-            ExecuteBehavior((int)gene.oneHalf % 3, closest);
-            ExecuteBehavior((int)gene.otherHalf % 3, closest);
+            if ((int)gene.oneHalf % 3 != (int)gene.otherHalf % 3)
+            {
+                ExecuteBehavior((int)gene.oneHalf % 3, closest);
+                ExecuteBehavior((int)gene.otherHalf % 3, closest);
+            }
+            else
+            {
+                ExecuteBehavior((int)gene.oneHalf % 3, closest);
+            }
         }
     }
 
@@ -118,23 +125,23 @@ public class GeneBehaviorController : MonoBehaviour
         if (Time.time - lastShot > RateOfFire)
         {
             lastShot = Time.time;
-            GameObject.Instantiate(BulletPrefab, BulletAperture.position, BulletAperture.rotation);
+            GameObject.Instantiate(BulletPrefab, BulletAperture.position, BulletAperture.rotation, transform);
         }
     }
 
     private void Avoid(Transform target)
     {
-        float delta = target.position.x - transform.position.x;
+        float delta = transform.localPosition.x - target.localPosition.x;
         float move = delta > 0f ? MoveSpeed : -MoveSpeed;
-        move = Mathf.Abs(delta) > MoveSpeed ? move : delta;
-        transform.position += Vector3.right * move * Time.deltaTime;
+        //move = Mathf.Abs(delta) > MoveSpeed ? move : delta;
+        transform.localPosition += Vector3.right * move * Time.deltaTime;
     }
 
     private void Tackle(Transform target)
     {
-        float delta = transform.position.x - target.position.x;
+        float delta = target.localPosition.x - transform.localPosition.x;
         float move = delta > 0f ? MoveSpeed : -MoveSpeed;
-        move = Mathf.Abs(delta) > MoveSpeed ? move : delta;
-        transform.position += Vector3.right * move * Time.deltaTime;
+        //move = Mathf.Abs(delta) > MoveSpeed ? move : delta;
+        transform.localPosition += Vector3.right * move * Time.deltaTime;
     }
 }

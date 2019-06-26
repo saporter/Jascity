@@ -196,4 +196,4 @@ MonoBehaviour:
     type: 3}
   BulletAperture: {fileID: 8800377773832824910}
   RateOfFire: 0.6
-  MoveSpeed: 7
+  MoveSpeed: 3.5

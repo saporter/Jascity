@@ -6,46 +6,76 @@ public class MoveWithPlayer : MonoBehaviour
 {
     public float Speed = 0.02f;
     public bool Destructable = true;
+    public Vector3 OutOfTheWay = new Vector3(-1000f, 1000f, 0f);
 
-    private bool inPlay = true;
+    private bool inPlay = false;
     private Vector3 startPos;
     private Quaternion startRot;
+    private Transform[] children;
+    private Vector3[] startPositions;
 
     private void Awake()
     {
-        startPos = transform.position;
-        startRot = transform.rotation;
+        startPos = transform.localPosition;
+        startRot = transform.localRotation;
+        children = GetComponentsInChildren<Transform>();
+
+        List<Vector3> pos = new List<Vector3>();
+        for (int i = 0; i < children.Length; ++i)
+        {
+            pos.Add(children[i].position);
+        }
+        startPositions = pos.ToArray();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.tag == "CameraViewTrigger")
+        GameManager.Instance.RacingToggleEvent.AddListener(RacingToggle);
+    }
+
+    private void OnDestroy()
+    {
+        if(GameManager.Instance != null)
         {
-            if (transform.parent != GameManager.Instance.transform)
-            {
-                StartPlaying();
-            }
-            else
-            {
-                StopPlayingAndMoveToStart();
-            }
+            GameManager.Instance.RacingToggleEvent.RemoveListener(RacingToggle);
         }
     }
 
-    public void StartPlaying()
+    private void RacingToggle()
     {
-        transform.SetParent(GameManager.Instance.transform);
-        inPlay = true;
-        StartCoroutine(Moving());
+        if (GameManager.Instance.Racing)
+        {
+            inPlay = true;
+            StartCoroutine(Moving());
+        }
+        else
+        {
+            StopPlayingAndMoveToStart();
+        }
     }
 
-    public void StopPlayingAndMoveToStart()
+    private void StopPlayingAndMoveToStart()
     {
-        transform.SetParent(null);
         inPlay = false;
 
-        transform.position = startPos;
-        transform.rotation = startRot;
+        transform.localPosition = startPos;
+        transform.localRotation = startRot;
+
+        for (int i = 0; i < children.Length; ++i)
+        {
+            if (children[i] != transform)
+            {
+                children[i].position = startPositions[i];
+            }
+
+        }
+    }
+
+    public void StopPlaying()
+    {
+        inPlay = false;
+
+        transform.position -= OutOfTheWay;
     }
 
     IEnumerator Moving()
@@ -60,7 +90,7 @@ public class MoveWithPlayer : MonoBehaviour
             // Otherwise proceed as normal
             else
             {
-                transform.position += Vector3.down * Speed;
+                transform.localPosition += Vector3.down * Speed;
             }
             yield return new WaitForFixedUpdate();
         }

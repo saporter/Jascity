@@ -18,14 +18,14 @@ public class ShootForward : MonoBehaviour
         if (Time.time - startLife > 10f)
             Destroy(gameObject);
 
-        transform.position += Vector3.up * Speed * Time.deltaTime;
+        transform.localPosition += Vector3.up * Speed * Time.deltaTime;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         var target = collision.gameObject.GetComponent<MoveWithPlayer>();
-        if (target.Destructable)
-            target.StopPlayingAndMoveToStart();
+        if (target != null && target.Destructable)
+            target.StopPlaying();
         Destroy(gameObject);
     }
 

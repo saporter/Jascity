@@ -27,7 +27,7 @@ public class RewardOnCollision : MonoBehaviour
             {
                 timeAwarded = Time.time;
                 timer.AdditionalTime += Reward;
-                food.StopPlayingAndMoveToStart();
+                food.StopPlaying();
             }
         }
     }

@@ -8,6 +8,6 @@ public class WarbleMaker : MonoBehaviour
 
     public void MakeNewRandomWarble()
     {
-        GameObject.Instantiate(WarblePrefab, transform.position, transform.rotation);
+        GameObject.Instantiate(WarblePrefab, transform.position, transform.rotation, transform);
     }
 }
