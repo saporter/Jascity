@@ -13,7 +13,7 @@ public class MoveWithPlayer : MonoBehaviour
     private Quaternion startRot;
     private Transform[] children;
     private Vector3[] startPositions;
-
+    
     private void Awake()
     {
         startPos = transform.localPosition;
@@ -31,6 +31,14 @@ public class MoveWithPlayer : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.RacingToggleEvent.AddListener(RacingToggle);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "CameraViewTrigger")
+        {
+            StopPlaying();
+        }
     }
 
     private void OnDestroy()
