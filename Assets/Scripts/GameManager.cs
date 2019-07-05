@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     public bool Racing { get; private set; }
     public bool Finished { get; private set; }
     public GameObject RacingWarble { get; private set; }
+    public CanvasGroup NotepadCG;
     public UnityEvent RacingToggleEvent;
-
+    
     private Vector3 startCameraPos;
     private Quaternion startCameraRot;
     private float startCameraSize;
@@ -32,6 +33,7 @@ public class GameManager : MonoBehaviour
     private int currentPosition;
     private Transform originalWarbleParent;
     private Vector3 originalStartAreaPosition;
+    private bool notepadOn = false;   // an admin flag that turns the notepad back on once off
 
     private void Awake()
     {
@@ -83,6 +85,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(RaceAroundTrack());
         RacingToggleEvent.Invoke();
         StartCoroutine(MoveStartAreaIn(1f));
+
+        if (NotepadCG.alpha > 0f)
+        {
+            notepadOn = true;
+            HelperTools.ToggleOff(NotepadCG);
+        }
     }
 
     
@@ -109,6 +117,11 @@ public class GameManager : MonoBehaviour
         timer.StopTimer();
         input.ActiveWarble = null;
         currentPosition = 0;
+
+        if (notepadOn)
+        {
+            HelperTools.ToggleOn(NotepadCG);
+        }
     }
 
     IEnumerator MoveCameraToWarble()
