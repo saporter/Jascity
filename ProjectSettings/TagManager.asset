@@ -8,6 +8,7 @@ TagManager:
   - Warble
   - Predator
   - Food
+  - Blob
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Warble
   - CollidesTrackOnly
   - Track
-  - 
+  - Floor
   - 
   - 
   - 
