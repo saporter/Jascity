@@ -22,7 +22,7 @@ public class Genes : MonoBehaviour
         {
             genes[i] = new Gene {
                 leftHalf = GeneBuilder.MakeAllele(load.leftBehaviours[i], load.leftDominance[i]),
-                rightHalf = GeneBuilder.MakeAllele(load.leftBehaviours[i], load.leftDominance[i]) };
+                rightHalf = GeneBuilder.MakeAllele(load.rightBehaviours[i], load.rightDominance[i]) };
         }
     }
 
@@ -40,7 +40,7 @@ public class Genes : MonoBehaviour
         {
             InvokeBehaviour(gene.leftHalf.behaviour, targetPosition);
         }
-        else if(gene.rightHalf.dominance > gene.leftHalf.dominance)
+        else if (gene.leftHalf.dominance < gene.rightHalf.dominance)
         {
             InvokeBehaviour(gene.rightHalf.behaviour, targetPosition);
         }

@@ -9,7 +9,6 @@ public class WarblesReactToThis : MonoBehaviour
     List<Genes> warbles;
     private void Awake()
     {
-        Debug.Log("This should really invoke a gene behavior");
         warbles = new List<Genes>(10);
     }
 
