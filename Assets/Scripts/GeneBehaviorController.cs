@@ -9,13 +9,13 @@ public class GeneBehaviorController : MonoBehaviour
     public float RateOfFire = 0.6f;
     public float MoveSpeed = 7f;
 
-    private Genes behaviorGenes;
+    private OldGenes behaviorGenes;
     private BoxCollider radar;
     private List<Transform> encounters;  // The predators, food or warbles encountered on the track
 
     private void Awake()
     {
-        behaviorGenes = GetComponent<Genes>();
+        behaviorGenes = GetComponent<OldGenes>();
         radar = GetComponent<BoxCollider>();
         encounters = new List<Transform>(8);
     }
@@ -54,7 +54,7 @@ public class GeneBehaviorController : MonoBehaviour
             return;
 
         int behaviorGeneIndex = closest.tag == "Predator" ? 0 : closest.tag == "Food" ? 1 : 2;
-        Gene gene = behaviorGenes.genes[behaviorGeneIndex];
+        AGene gene = behaviorGenes.genes[behaviorGeneIndex];
 
         bool atLeastOneDominant = false;
         if((int)gene.oneHalf > 2)
@@ -105,15 +105,15 @@ public class GeneBehaviorController : MonoBehaviour
 
     private void ExecuteBehavior(int behavior, Transform target)
     {
-        switch((Allele)behavior)
+        switch((AnAllele)behavior)
         {
-            case Allele.shoot:
+            case AnAllele.shoot:
                 Shoot();
                 break;
-            case Allele.avoid:
+            case AnAllele.avoid:
                 Avoid(target);
                 break;
-            case Allele.tackle:
+            case AnAllele.tackle:
                 Tackle(target);
                 break;
         }

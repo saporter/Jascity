@@ -43,7 +43,7 @@ public class SpawnerController : MonoBehaviour
 
     public void SpawnWarble()
     {
-        Genes newWarble = GameObject.Instantiate<GameObject>(WarblePrefab).GetComponent<Genes>();
+        OldGenes newWarble = GameObject.Instantiate<GameObject>(WarblePrefab).GetComponent<OldGenes>();
         newWarble.transform.position = transform.position;
         newWarble.transform.SetParent(WarbleMaker.transform);
         newWarble.Mate(Left.WarbleGenes.genes, Right.WarbleGenes.genes);

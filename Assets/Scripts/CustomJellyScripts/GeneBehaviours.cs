@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCController : MonoBehaviour
+public class GeneBehaviours : MonoBehaviour
 {
     public float RunLookout = 20f;
     WarbleActions actions;

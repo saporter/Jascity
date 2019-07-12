@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TestController : MonoBehaviour
 {
-    NPCController controller;
+    GeneBehaviours controller;
 
     private void Awake()
     {
-        controller = GetComponent<NPCController>();
+        controller = GetComponent<GeneBehaviours>();
     }
 
     private void Update()

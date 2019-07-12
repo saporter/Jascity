@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BreederController : MonoBehaviour
 {
     public bool HasWarble { get { return hasWarble; } }
-    public Genes WarbleGenes { get; set; }
+    public OldGenes WarbleGenes { get; set; }
     public GameObject GeneUI;
     public SpawnerController SpawnController;
 
@@ -24,7 +24,7 @@ public class BreederController : MonoBehaviour
     {
         cg.alpha = 1f;
         hasWarble = true;
-        WarbleGenes = other.gameObject.GetComponent<Genes>();
+        WarbleGenes = other.gameObject.GetComponent<OldGenes>();
         ui.ShowGenes(WarbleGenes.genes);
         SpawnController.WarbleEnterExit();
     }

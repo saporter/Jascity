@@ -21,7 +21,7 @@ public class GeneUIController : MonoBehaviour
         cg.alpha = 0.0f;
     }
 
-    public void ShowGenes(Gene[] genes)
+    public void ShowGenes(AGene[] genes)
     {
         for(int i = 0; i < genes.Length; ++i)
         {
@@ -34,21 +34,21 @@ public class GeneUIController : MonoBehaviour
         }
     }
 
-    ColorSprite GetColorAndSprite(Allele allele)
+    ColorSprite GetColorAndSprite(AnAllele allele)
     {
         switch (allele)
         {
-            case Allele.shootDominant:
+            case AnAllele.shootDominant:
                 return new ColorSprite { color = new Color(255f, 0f, 0f), sprite = Dominant };
-            case Allele.shoot:
+            case AnAllele.shoot:
                 return new ColorSprite { color = new Color(128f, 0f, 0f), sprite = Recessive };
-            case Allele.avoidDominant:
+            case AnAllele.avoidDominant:
                 return new ColorSprite { color = new Color(0f, 255f, 0f), sprite = Dominant };
-            case Allele.avoid:
+            case AnAllele.avoid:
                 return new ColorSprite { color = new Color(0f, 128f, 0f), sprite = Recessive };
-            case Allele.tackleDominant:
+            case AnAllele.tackleDominant:
                 return new ColorSprite { color = new Color(0f, 0f, 255f), sprite = Dominant };
-            case Allele.tackle:
+            case AnAllele.tackle:
                 return new ColorSprite { color = new Color(0f, 0f, 128f), sprite = Recessive };
         }
 
