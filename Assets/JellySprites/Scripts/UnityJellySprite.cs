@@ -64,7 +64,7 @@ public class UnityJellySprite : JellySprite
 	{
 		MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 		Material material = null;
-		
+
 		// Grab a material from the cache, generate a new one if none exist
 		for(int loop = 0; loop < s_MaterialList.Count; loop++)
 		{
@@ -76,7 +76,7 @@ public class UnityJellySprite : JellySprite
 		
 		if(material == null)
 		{
-			material = new Material(Shader.Find("Sprites/Default"));
+			material = new Material(Shader.Find("Sprites/Diffuse"));
 			material.mainTexture = m_Sprite.texture;
 			material.name = m_Sprite.texture.name + "_Jelly";
 			s_MaterialList.Add(material);
@@ -85,8 +85,9 @@ public class UnityJellySprite : JellySprite
 		meshRenderer.sharedMaterial = material;
 	}
 
+
 #if UNITY_EDITOR
-	[MenuItem("GameObject/Create Other/Jelly Sprite/Unity Jelly Sprite", false, 12951)]
+    [MenuItem("GameObject/Create Other/Jelly Sprite/Unity Jelly Sprite", false, 12951)]
 	static void DoCreateSpriteObject()
 	{
 		GameObject gameObject = new GameObject("JellySprite");

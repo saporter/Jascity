@@ -154,11 +154,14 @@ public abstract class JellySprite : MonoBehaviour
 
 	public List<ReferencePoint> ReferencePoints { get { return m_ReferencePoints; } }
 	public ReferencePoint CentralPoint { get { return m_CentralPoint; } }
-#endregion
+    #endregion
 
-#region PRIVATE_VARIABLES
-	// Internal rendering data
-	Vector3[] 	m_Vertices;
+    #region PRIVATE_VARIABLES
+    // put all sprites in a predetermined order if their order is set to zero
+    private static int universalOrder = 0;
+
+    // Internal rendering data
+    Vector3[] 	m_Vertices;
 	Vector3[] 	m_InitialVertexPositions;
 	Color[] 	m_Colors;
 	Vector2[] 	m_TexCoords;
@@ -362,12 +365,18 @@ public abstract class JellySprite : MonoBehaviour
 		m_Transform = this.transform;
 	}
 
-	/// <summary>
-	/// Start this instance.
-	/// </summary>
-	void Start()
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
+    void Start()
 	{
-		if(m_FreeModeBodyPositions == null)
+        Renderer r = GetComponent<Renderer>();
+        if (r != null && r.sortingOrder == 0)
+        {
+            r.sortingOrder = --universalOrder;
+        }
+
+        if (m_FreeModeBodyPositions == null)
 		{
 			m_FreeModeBodyPositions = new List<Vector3>();
 			m_FreeModeBodyPositions.Add(Vector3.zero);

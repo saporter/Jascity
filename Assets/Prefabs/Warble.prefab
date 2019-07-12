@@ -19700,7 +19700,7 @@ MonoBehaviour:
   JumpDelay: 1.5
   MaxVelocity: 30
   Speed: 200
-  ShockDelay: 0.5
+  ShockDelay: 1.5
   GroundLayer:
     serializedVersion: 2
     m_Bits: 4096
