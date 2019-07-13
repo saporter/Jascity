@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class ChangeHorizontalVector : MonoBehaviour
 {
-    public Vector2 HorizontalRight = Vector2.right;
+    public Vector2 HorizontalRight = Vector2.zero;
 
+    private void Awake()
+    {
+        if (HorizontalRight == Vector2.zero)
+        {
+            HorizontalRight = transform.right.normalized; 
+        }
+
+        HorizontalRight = HorizontalRight.normalized;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var jelly = collision.GetComponent<WarbleActions>();
         if(jelly != null)
         {
             jelly.ForwardMovementDirection = HorizontalRight;
-            //jelly.Floors.Add(this);
         }
     }
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    var jelly = collision.GetComponent<WarbleActions>();
-    //    if (jelly != null)
-    //    {
-    //        jelly.Floors.Add(this);
-    //    }
-    //}
 }

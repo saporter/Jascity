@@ -7,7 +7,7 @@ public class LaunchController : MonoBehaviour
 {
     public GameObject RandomButton;
     public GameObject CountdownText;
-    public GameManager gameManager;
+    public OldGM gameManager;
 
     private CanvasGroup cgRandom;
     private CanvasGroup cgCountdown;
@@ -94,7 +94,7 @@ public class LaunchController : MonoBehaviour
 
     IEnumerator WaitForRaceEnd()
     {
-        while(GameManager.Instance.Racing)
+        while(OldGM.Instance.Racing)
         {
             yield return new WaitForSeconds(0.1f);
         }

@@ -43,6 +43,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Cave Background
+    uniqueID: 1298657985
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cave
+    uniqueID: 1800143367
     locked: 0

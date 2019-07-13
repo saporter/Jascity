@@ -7,6 +7,7 @@ public class MoveToMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 point = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 60f);
+        transform.position = Camera.main.ScreenToWorldPoint(point);
     }
 }

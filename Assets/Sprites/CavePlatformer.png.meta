@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: 6ec07366bad149e47a39c6e5ae7299bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1014802362709448150
+    second: CavePlatformer_0
+  - first:
+      213: -6278284415848690018
+    second: CavePlatformer_1
+  - first:
+      213: 4936499207506741458
+    second: CavePlatformer_2
+  - first:
+      213: -5976376524883144293
+    second: CavePlatformer_3
+  - first:
+      213: -7932808772936455771
+    second: CavePlatformer_4
+  - first:
+      213: -5693591613407885819
+    second: CavePlatformer_5
+  - first:
+      213: -4593268223252684125
+    second: CavePlatformer_6
+  - first:
+      213: -17248194494333854
+    second: CavePlatformer_7
+  - first:
+      213: -5182681755497319533
+    second: cave_04
+  - first:
+      213: -6880506025966167694
+    second: CavePlatformer_9
+  - first:
+      213: 4549668398804703629
+    second: CavePlatformer_10
+  - first:
+      213: -3019053749815951302
+    second: CavePlatformer_11
+  - first:
+      213: -7554876957936992241
+    second: CavePlatformer_12
+  - first:
+      213: 4477833295916661648
+    second: CavePlatformer_13
+  - first:
+      213: 6714202586139759141
+    second: CavePlatformer_14
+  - first:
+      213: -2047070374634465270
+    second: cave_03
+  - first:
+      213: -4372384994475619269
+    second: cave_02
+  - first:
+      213: -4305908523999573442
+    second: CavePlatformer_17
+  - first:
+      213: -4480174862515619920
+    second: CavePlatformer_18
+  - first:
+      213: -3873016189060794068
+    second: cave_01
+  - first:
+      213: 5650528696476611033
+    second: CavePlatformer_20
+  - first:
+      213: 4383038159822322076
+    second: CavePlatformer_21
+  - first:
+      213: 1384461364535101721
+    second: CavePlatformer_22
+  - first:
+      213: 2881821568585704282
+    second: CavePlatformer_23
+  - first:
+      213: 6126058793853412193
+    second: CavePlatformer_24
+  - first:
+      213: 5167902903320953902
+    second: CavePlatformer_25
+  - first:
+      213: 4329244027882782118
+    second: CavePlatformer_26
+  - first:
+      213: 4063028900377282492
+    second: CavePlatformer_27
+  - first:
+      213: -7460099194969976040
+    second: CavePlatformer_28
+  - first:
+      213: -4385668234981627442
+    second: CavePlatformer_29
+  - first:
+      213: -5953349329237088523
+    second: CavePlatformer_30
+  - first:
+      213: 8211405987403640117
+    second: CavePlatformer_31
+  - first:
+      213: 3495196862623561412
+    second: CavePlatformer_32
+  - first:
+      213: -3272101688018336929
+    second: CavePlatformer_33
+  - first:
+      213: -7415349144313989255
+    second: CavePlatformer_34
+  - first:
+      213: 872427078519078216
+    second: CavePlatformer_35
+  - first:
+      213: -3470145817085739750
+    second: CavePlatformer_36
+  - first:
+      213: -1834711342404213324
+    second: CavePlatformer_37
+  - first:
+      213: 3979454636186298222
+    second: CavePlatformer_38
+  - first:
+      213: -2066491062870147718
+    second: CavePlatformer_39
+  - first:
+      213: 4543846995863192908
+    second: CavePlatformer_40
+  - first:
+      213: 9056591319294121239
+    second: CavePlatformer_41
+  - first:
+      213: 3713700285140450271
+    second: CavePlatformer_42
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CavePlatformer_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a1b04ea9c076d4398eb7b04a1a2f03
+      internalID: -1014802362709448150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce37f81fb039c34a8a70aff8da97e1e
+      internalID: -6278284415848690018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2985690dd77277c41a33302005926f4f
+      internalID: 4936499207506741458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_3
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9c61be9d3106d438e7172e98dacbd6
+      internalID: -5976376524883144293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_4
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722ce656903440642bdee27066e7e884
+      internalID: -7932808772936455771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_5
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88c9150bcbfbe474ebcb4d3ba209f7b3
+      internalID: -5693591613407885819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_6
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 438.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c836d4b82e560974ba81c78bbf14edeb
+      internalID: -4593268223252684125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14edfec559566f34abfc27e176e50db0
+      internalID: -17248194494333854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave_04
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 288
+        width: 31
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e10682d1492a6c4d98f8c568ace6ff2
+      internalID: -5182681755497319533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 296eff5d4acc40e4984869ba4ab8c424
+      internalID: -6880506025966167694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_10
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7bc297614eaef498691e8afd13c76f
+      internalID: 4549668398804703629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_11
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a67016f3dfb20418300ccd79d0ddac
+      internalID: -3019053749815951302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_12
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bb360aa5f228740a09483416abfa19
+      internalID: -7554876957936992241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_13
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 365.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b79a16c246e8d641b677d9511e881fa
+      internalID: 4477833295916661648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcb35ceb685b3f45bf7b914e07ceda6
+      internalID: 6714202586139759141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave_03
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6daf371a9f4b6b94392cb53778bd9e41
+      internalID: -2047070374634465270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave_02
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 96
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0701007696c5ff41a11d6fe43d9d040
+      internalID: -4372384994475619269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_17
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 292.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7a899a4b8aab74296fc4b33be0d1ed
+      internalID: -4305908523999573442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_18
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 292.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15826f2899d293944835ab3e9c7b9614
+      internalID: -4480174862515619920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave_01
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21342675e868d714ea3f990e9ab64c75
+      internalID: -3873016189060794068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_20
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 292.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4464bd9507f4b498b23f2a4ee0fcff
+      internalID: 5650528696476611033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 219.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8653aa8524108a34eb2ab28795d1dd87
+      internalID: 4383038159822322076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_22
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 219.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e700932a2b3363499e47717517ffa83
+      internalID: 1384461364535101721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_23
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 219.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde8d43b7109c4d458257d09327c27ab
+      internalID: 2881821568585704282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_24
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 219.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9bd7ee3178f3d4188cdd20be705a2a
+      internalID: 6126058793853412193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_25
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 224
+        width: 118
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960e9e0c7a0127a4f981e67ad966a54a
+      internalID: 5167902903320953902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fa27e5e5191564799624c5207f3812
+      internalID: 4329244027882782118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_27
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca43e259232eec489a56f4a5894fe37
+      internalID: 4063028900377282492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_28
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854bbf2451ea9394ea026f88eb17ee22
+      internalID: -7460099194969976040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_29
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36d1b6208b204c4899b8c9c3fec2c63
+      internalID: -4385668234981627442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_30
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1150492d83db5a4d9adc55e8d1f4fcc
+      internalID: -5953349329237088523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_31
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 146.85715
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bd420a302c35b42b2a76e7eb18cce1
+      internalID: 8211405987403640117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeefcc35d93317479286f31bdae0344
+      internalID: 3495196862623561412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_33
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f146863a310bb2c4aa627612b3e0fd02
+      internalID: -3272101688018336929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_34
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cb0bf15883c0c4e9af507498e41925
+      internalID: -7415349144313989255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_35
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b98ed05ccafb854d96af8f293b9e60d
+      internalID: 872427078519078216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_36
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40da14bc092a92840b7aa6bd30ede10a
+      internalID: -3470145817085739750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_37
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 73.85714
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a337f90030e859f4e8f36295d57f31d5
+      internalID: -1834711342404213324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8571396
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f3585560520e74b9accce25c1f326b
+      internalID: 3979454636186298222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_39
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 0.8571396
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd461795228a4014c9e50b64b46fb1be
+      internalID: -2066491062870147718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_40
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 0.8571396
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7a0e3b1034a3b4ba1decdaaf933084
+      internalID: 4543846995863192908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_41
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0.8571396
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728f7dba67fb2244cafc3ddf874b411f
+      internalID: 9056591319294121239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CavePlatformer_42
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 0.8571396
+        width: 118.85714
+        height: 73.14286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad21ec5a6c4cb848b157c33f3cf805e
+      internalID: 3713700285140450271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 00b09fd243c4a6940b02d326ee5d9713
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

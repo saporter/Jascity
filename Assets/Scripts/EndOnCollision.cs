@@ -13,9 +13,9 @@ public class EndOnCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == GameManager.Instance.RacingWarble)
+        if (collision.gameObject == OldGM.Instance.RacingWarble)
         {
-            GameManager.Instance.ResetRace();
+            OldGM.Instance.ResetRace();
         }
     }
 }

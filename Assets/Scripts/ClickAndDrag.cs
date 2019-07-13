@@ -17,7 +17,7 @@ public class ClickAndDrag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.Racing)
+        if (OldGM.Instance.Racing)
             return;
 
         screenPoint = Camera.main.WorldToScreenPoint(scanPos);
@@ -26,7 +26,7 @@ public class ClickAndDrag : MonoBehaviour
     }
     private void OnMouseDrag()
     {
-        if (GameManager.Instance.Racing)
+        if (OldGM.Instance.Racing)
             return;
 
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
@@ -37,7 +37,7 @@ public class ClickAndDrag : MonoBehaviour
 
     private void OnMouseUp()
     {
-        if (GameManager.Instance.Racing)
+        if (OldGM.Instance.Racing)
             return;
 
         scanPos = transform.position;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7664450954593684454}
   - component: {fileID: 181269445881877216}
   - component: {fileID: 1387083770591246944}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning (Sphere)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4870,7 +4870,7 @@ GameObject:
   - component: {fileID: 5614768138447955572}
   - component: {fileID: 5045675401349647723}
   - component: {fileID: 5045675401349647764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC Warble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5036,9 +5036,11 @@ MonoBehaviour:
   JumpDelay: 0.5
   MaxVelocity: 30
   Speed: 200
+  ShockDelay: 0.2
   GroundLayer:
     serializedVersion: 2
     m_Bits: 4096
+  Lightning: {fileID: 0}
 --- !u!114 &5045675401349647764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5051,7 +5053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d6cf0899956e8428b0ff537b34d1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RunLookout: 20
 --- !u!1 &5615353426262544472
 GameObject:
   m_ObjectHideFlags: 0
@@ -5063,7 +5064,7 @@ GameObject:
   - component: {fileID: 5612993463687546006}
   - component: {fileID: 5716280293586022026}
   - component: {fileID: 5703851732066000522}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9917,7 +9918,7 @@ GameObject:
   - component: {fileID: 5612644454283171640}
   - component: {fileID: 5704645352404995530}
   - component: {fileID: 5705975610265873930}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14729,7 +14730,7 @@ GameObject:
   - component: {fileID: 5705947879079695844}
   - component: {fileID: 5479350627369877792}
   - component: {fileID: 5479082716656241788}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}

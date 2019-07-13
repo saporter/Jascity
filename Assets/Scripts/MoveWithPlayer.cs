@@ -30,7 +30,7 @@ public class MoveWithPlayer : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.RacingToggleEvent.AddListener(RacingToggle);
+        OldGM.Instance.RacingToggleEvent.AddListener(RacingToggle);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,15 +43,15 @@ public class MoveWithPlayer : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(GameManager.Instance != null)
+        if(OldGM.Instance != null)
         {
-            GameManager.Instance.RacingToggleEvent.RemoveListener(RacingToggle);
+            OldGM.Instance.RacingToggleEvent.RemoveListener(RacingToggle);
         }
     }
 
     private void RacingToggle()
     {
-        if (GameManager.Instance.Racing)
+        if (OldGM.Instance.Racing)
         {
             inPlay = true;
             StartCoroutine(Moving());
@@ -91,7 +91,7 @@ public class MoveWithPlayer : MonoBehaviour
         while (inPlay)
         {
             // Second check in case game was stopped from elsewhere
-            if (!GameManager.Instance.Racing)
+            if (!OldGM.Instance.Racing)
             {
                 StopPlayingAndMoveToStart();
             }

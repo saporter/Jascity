@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameManager : MonoBehaviour
+public class OldGM : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static OldGM Instance;
     public float Speed = 5f;    // How fast the track moves
     public float RotationSpeed = 5f;
     public Transform CameraRacingPosition;
@@ -205,20 +205,4 @@ public class GameManager : MonoBehaviour
     }
 }
 
-public class HelperTools
-{
-    public static void ToggleOn(CanvasGroup cg)
-    {
-        cg.alpha = 1.0f;
-        cg.interactable = true;
-        cg.blocksRaycasts = true;
-    }
 
-    public static void ToggleOff(CanvasGroup cg)
-    {
-        cg.alpha = 0.0f;
-        cg.interactable = false;
-        cg.blocksRaycasts = false;
-    }
-
-}
