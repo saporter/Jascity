@@ -7,11 +7,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public ParticleSystem WarpParticleSystem;
+    public CageManager WarbleCageManager;
+    public GameState CurrentGameState { get { return currentGameState; } }
     public Transform CavePosition;
     public Transform LabPosition;
     public Transform MazePosition;
 
     public GameStateEvent GameStateChange = new GameStateEvent();
+
+    private GameState currentGameState = GameState.Lab;
 
     private void Awake()
     {
@@ -27,14 +32,17 @@ public class GameManager : MonoBehaviour
 
     private void ChangingState(GameState state)
     {
+        currentGameState = state;
         // TODO: Mouse and camera control stuff
         switch(state)
         {
             case GameState.Lab:
                 Camera.main.GetComponent<CameraController>().enabled = false;
+                WarpParticleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
                 break;
             case GameState.Cave:
                 Camera.main.GetComponent<CameraController>().enabled = true;
+                WarpParticleSystem.Play();
                 break;
             case GameState.Transition:
                 Camera.main.GetComponent<CameraController>().enabled = false;
@@ -52,6 +60,7 @@ public class GameStateEvent : UnityEvent<GameState>
 {
 
 }
+
 
 public enum GameState
 {

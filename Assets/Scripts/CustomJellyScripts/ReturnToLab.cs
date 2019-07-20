@@ -48,7 +48,7 @@ public class ReturnToLab : MonoBehaviour
             if (exit != 0)
             {
                 HelperTools.ToggleOn(textCG);
-                countdown = Mathf.Ceil(3f - (Time.time - time));
+                countdown = Mathf.Ceil(3f - 2f*(Time.time - time));
                 CountdownText.text = "" + countdown;
                 if (countdown <= 0)
                 {
@@ -66,12 +66,12 @@ public class ReturnToLab : MonoBehaviour
         }
     }
 
-    IEnumerator ReturnToTheLab()
+    public IEnumerator ReturnToTheLab()
     {
         listening = false;
         GameManager.Instance.GameStateChange.Invoke(GameState.Transition);
         StartCoroutine(FadeToLabIn(FadingTime));
-        yield return new WaitForSeconds(FadingTime);
+        yield return new WaitForSeconds(FadingTime*2f + 0.05f);
         GameManager.Instance.GameStateChange.Invoke(GameState.Lab);
     }
 

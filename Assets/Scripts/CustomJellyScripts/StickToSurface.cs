@@ -31,7 +31,6 @@ public class StickToSurface : MonoBehaviour
         lastToTouch.constraints |= RigidbodyConstraints2D.FreezePosition;   // stick
     }
 
-    
     public void Unstick(float forSeconds)
     {
         stickAgainTime = Time.time + forSeconds;

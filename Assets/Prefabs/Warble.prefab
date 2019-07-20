@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5830667516409000368}
   - component: {fileID: 4050098523229235382}
   - component: {fileID: 2992855158319120438}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning (Sphere)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4865,9 +4865,7 @@ GameObject:
   - component: {fileID: 8598035986486222686}
   - component: {fileID: 8494669902416780252}
   - component: {fileID: 8473718285592047538}
-  - component: {fileID: 8556198150630570870}
-  - component: {fileID: 8556474306912417322}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9825,32 +9823,6 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!135 &8556198150630570870
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8599794735177894104}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &8556474306912417322
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8599794735177894104}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8599999606079967074
 GameObject:
   m_ObjectHideFlags: 0
@@ -9862,7 +9834,7 @@ GameObject:
   - component: {fileID: 8598276428345060718}
   - component: {fileID: 8475158802057705372}
   - component: {fileID: 8473692203119727708}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14672,7 +14644,7 @@ GameObject:
   - component: {fileID: 8598061560217075392}
   - component: {fileID: 8494745591719449820}
   - component: {fileID: 8475508768300868828}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19515,6 +19487,67 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &8772779495817899093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7766912007107522167}
+  - component: {fileID: 6866262546915197132}
+  - component: {fileID: 8772981961659016602}
+  m_Layer: 9
+  m_Name: 3D Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7766912007107522167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772779495817899093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8985525357689780175}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &6866262546915197132
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772779495817899093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8772981961659016602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772779495817899093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7913df7b70a9294f82c3758a356f622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StickyComponent: {fileID: 8985525357689780168}
+  ParentJellySprite: {fileID: 8985525357689780172}
+  PortalWarpSpeed: 1
+  PortalMaxScale: 10
 --- !u!1 &8985525357689780163
 GameObject:
   m_ObjectHideFlags: 0
@@ -19534,9 +19567,9 @@ GameObject:
   - component: {fileID: 8985525357689780165}
   - component: {fileID: 8985525357689780162}
   - component: {fileID: 8985525357689780164}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Warble
-  m_TagString: Untagged
+  m_TagString: Warble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19553,6 +19586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8598035986486222686}
+  - {fileID: 7766912007107522167}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

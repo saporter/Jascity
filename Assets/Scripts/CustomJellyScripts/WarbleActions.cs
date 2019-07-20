@@ -13,6 +13,7 @@ public class WarbleActions : MonoBehaviour
     public ParticleSystem Lightning;
     public Vector2 ForwardMovementDirection { get { return moveDirection; } set { moveDirection = value; pushToFloor = -Vector2.Perpendicular(value); UpVector = -pushToFloor; } }
     public Vector2 UpVector { get; private set; }
+    public bool PauseActions { get; set; }
 
     Vector2 moveDirection = Vector2.right;
     Vector2 pushToFloor = -Vector2.Perpendicular(Vector2.right);
@@ -26,6 +27,7 @@ public class WarbleActions : MonoBehaviour
         jelly = GetComponent<JellySprite>();
         UpVector = Vector2.Perpendicular(ForwardMovementDirection);
         trigger = GetComponent<CircleCollider2D>();
+        PauseActions = false;
     }
 
     private void Start()
@@ -36,6 +38,8 @@ public class WarbleActions : MonoBehaviour
     private float lastJumpTime;
     public void JumpTowards(Vector2 direction)
     {
+        if (PauseActions)
+            return;
         if (Time.time - lastJumpTime < JumpDelay)
             return;
         if (!IsGrounded())
@@ -49,6 +53,9 @@ public class WarbleActions : MonoBehaviour
 
     public void Run(float input)
     {
+        if (PauseActions)
+            return;
+
         if (input != 0f && IsGrounded())
         {
             if (jelly.m_LockRotation)
@@ -80,6 +87,9 @@ public class WarbleActions : MonoBehaviour
     private float lastShock;
     public void Shock()
     {
+        if (PauseActions)
+            return;
+
         if (Time.time > lastShock + ShockDelay)
         {
             lastShock = Time.time;
