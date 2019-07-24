@@ -6,13 +6,14 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Light WorldLight;
     public ParticleSystem WarpParticleSystem;
+    public WarblesReactToThis MouseTrigger;
+    public Light MouseSpotLight;
     public CageManager WarbleCageManager;
     public GameState CurrentGameState { get { return currentGameState; } }
     public Transform CavePosition;
     public Transform LabPosition;
-    public Transform MazePosition;
 
     public GameStateEvent GameStateChange = new GameStateEvent();
 
@@ -27,22 +28,29 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GameStateChange.AddListener(ChangingState);
+        GameStateChange.AddListener(ChangingStateListener);
     }
 
-    private void ChangingState(GameState state)
+    private void ChangingStateListener(GameState state)
     {
         currentGameState = state;
-        // TODO: Mouse and camera control stuff
         switch(state)
         {
             case GameState.Lab:
                 Camera.main.GetComponent<CameraController>().enabled = false;
+                MouseTrigger.enabled = false;
+                MouseSpotLight.enabled = false;
                 WarpParticleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
                 break;
             case GameState.Cave:
                 Camera.main.GetComponent<CameraController>().enabled = true;
+                MouseTrigger.enabled = true;
+                MouseSpotLight.enabled = true;
                 WarpParticleSystem.Play();
+                break;
+            case GameState.Maze:
+                MouseTrigger.enabled = false;
+                MouseSpotLight.enabled = false;
                 break;
             case GameState.Transition:
                 Camera.main.GetComponent<CameraController>().enabled = false;
@@ -86,22 +94,24 @@ public class HelperTools
         cg.blocksRaycasts = false;
     }
 
-    public static IEnumerator MoveCameraToPoint(Vector3 point, float travelTime)
+    public static IEnumerator MoveCameraToPoint(Transform point, float travelTime)
     {
-        Vector3 end = point;
+        Vector3 end = point.position;
+        end.z = Camera.main.transform.position.z;
         Vector3 v = Vector3.zero;
         float start = Time.time;
         float buffer = 4f;
 
         while (Vector3.Distance(Camera.main.transform.position, end) > 0.1f && (Time.time - start < travelTime))
         {
-            //end = point;
+            end = point.position;
+            end.z = Camera.main.transform.position.z;
             Camera.main.transform.position = Vector3.SmoothDamp(Camera.main.transform.position, end, ref v, travelTime / buffer);
 
             yield return new WaitForEndOfFrame();
         }
 
-        Camera.main.transform.position = point;
+        Camera.main.transform.position = end;
     }
 
 }

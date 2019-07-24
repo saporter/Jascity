@@ -16,8 +16,7 @@ public class DoorController : MonoBehaviour
         anim.SetTrigger("Open");
         GameManager.Instance.GameStateChange.Invoke(GameState.Transition);
 
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
-        StartCoroutine(HelperTools.MoveCameraToPoint(pos, 1f));
+        StartCoroutine(HelperTools.MoveCameraToPoint(transform, 1f));
         StartCoroutine(MoveToCaveIn(1f));
     }
 
@@ -26,7 +25,7 @@ public class DoorController : MonoBehaviour
         yield return new WaitForSeconds(seconds);
 
         float travelTime = 4f;
-        StartCoroutine(HelperTools.MoveCameraToPoint(GameManager.Instance.CavePosition.position, travelTime));
+        StartCoroutine(HelperTools.MoveCameraToPoint(GameManager.Instance.CavePosition, travelTime));
         yield return new WaitForSeconds(travelTime);
         GameManager.Instance.GameStateChange.Invoke(GameState.Cave);
     }

@@ -20,8 +20,8 @@ TagManager:
   - 
   - CollidesWarbleOnly
   - Warble
-  - CollidesTrackOnly
-  - Track
+  - CollidesWarbleOrNavTrigger
+  - Navigation
   - Floor
   - 
   - 

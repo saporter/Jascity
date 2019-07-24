@@ -49,7 +49,6 @@ public class CaptureWithMouse : MonoBehaviour
             actions.PauseActions = true;
             ParentJellySprite.m_GravityScale = 0f;
             ParentJellySprite.InitMass(); // to update gravity
-            //ParentJellySprite.
             StartCoroutine(GrowPortal(PortalWarpSpeed));
         }
     }
@@ -86,7 +85,7 @@ public class CaptureWithMouse : MonoBehaviour
             scale = 1f - (end - Time.time) / seconds;
             warpParticleSystem.transform.localScale = max * scale;
             ParentJellySprite.CentralPoint.Body2D.MovePosition(warpParticleSystem.transform.position);
-            yield return null; //new WaitForSeconds(0.05f);
+            yield return null; 
         }
 
         if(Warping)
