@@ -16,7 +16,7 @@ public class MovementController : MonoBehaviour
     {
         float run = Input.GetAxis("Horizontal");
         float jump = Input.GetAxis("Jump");
-        float shock = Input.GetAxis("Fire1");
+        //float shock = Input.GetAxis("Fire1");
 
         if (jump != 0)
         {
@@ -28,10 +28,10 @@ public class MovementController : MonoBehaviour
             actions.Run(run);
         }
 
-        if(shock != 0f)
-        {
-            actions.Shock();
-        }
+        //if(shock != 0f)
+        //{
+        //    actions.ChargeShock();
+        //}
     }
 
     

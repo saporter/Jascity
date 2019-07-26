@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Light MouseSpotLight;
     public CageManager WarbleCageManager;
     public GameState CurrentGameState { get { return currentGameState; } }
+    public bool HasSpotLight { get; set; }
     public Transform CavePosition;
     public Transform LabPosition;
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         if (Instance != null)
             Debug.LogError("Two GameManagers in scene");
         Instance = this;
+        HasSpotLight = false;
     }
 
     private void Start()
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
             case GameState.Cave:
                 Camera.main.GetComponent<CameraController>().enabled = true;
                 MouseTrigger.enabled = true;
-                MouseSpotLight.enabled = true;
+                MouseSpotLight.enabled = HasSpotLight;
                 WarpParticleSystem.Play();
                 break;
             case GameState.Maze:

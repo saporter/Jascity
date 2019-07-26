@@ -41,7 +41,7 @@ public class GeneBehaviours : MonoBehaviour
 
     public void Shock()
     {
-        actions.Shock();
+        actions.ChargeShock();
     }
 
 }

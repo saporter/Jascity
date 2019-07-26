@@ -18,6 +18,7 @@ public class WarblesReactToThis : MonoBehaviour
         if (w != null && !warbles.Contains(w))
         {
             warbles.Add(w);
+            
         }
     }
 

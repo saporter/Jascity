@@ -8,9 +8,8 @@ public class WarbleActions : MonoBehaviour
     public float JumpDelay = 0.1f;
     public float MaxVelocity = 30f;
     public float Speed = 200f;
-    public float ShockDelay = 0.2f;
     public LayerMask GroundLayer; //= LayerMask.GetMask("Floor");
-    public ParticleSystem Lightning;
+    public ShockController Lightning;
     public Vector2 ForwardMovementDirection { get { return moveDirection; } set { moveDirection = value; pushToFloor = -Vector2.Perpendicular(value); UpVector = -pushToFloor; } }
     public Vector2 UpVector { get; private set; }
     public bool PauseActions { get; set; }
@@ -84,17 +83,12 @@ public class WarbleActions : MonoBehaviour
         }
     }
 
-    private float lastShock;
-    public void Shock()
+    public void ChargeShock()
     {
         if (PauseActions)
             return;
 
-        if (Time.time > lastShock + ShockDelay)
-        {
-            lastShock = Time.time;
-            Lightning.Play();
-        }
+        Lightning.Charge();
     }
 
     public bool IsGrounded()
