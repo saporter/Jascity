@@ -71,6 +71,9 @@ public class Genes : MonoBehaviour
             case Behaviour.jumpTowards:
                 controller.JumpTowards(targetPosition);
                 break;
+            case Behaviour.burrow:
+                controller.Burrow();
+                break;
         }
     }
 }
@@ -83,7 +86,8 @@ class GeneBuilder
         {Behaviour.shock, Color.red },
         {Behaviour.avoid, Color.green },
         {Behaviour.follow, Color.blue },
-        {Behaviour.jumpTowards, Color.yellow}
+        {Behaviour.jumpTowards, Color.yellow },
+        {Behaviour.burrow, Color.cyan }
     };
 
     public static Allele MakeAllele(Behaviour behave, float dom)
@@ -111,5 +115,6 @@ public enum Behaviour
     shock,
     avoid,
     follow,
-    jumpTowards
+    jumpTowards,
+    burrow
 }

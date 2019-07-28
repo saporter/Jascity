@@ -363,7 +363,7 @@ public abstract class JellySprite : MonoBehaviour
 	void Awake()
 	{
 		m_Transform = this.transform;
-	}
+    }
 
     /// <summary>
     /// Start this instance.
@@ -505,6 +505,12 @@ public abstract class JellySprite : MonoBehaviour
 			m_CentralPoint.transform.eulerAngles = spriteAngle;
 		}
 	}
+
+    public void Restart()
+    {
+        Debug.Log("JellySprite.Restart() called.  Are you really using this?  Bro.  You can do better.");
+        Start();
+    }
 
 	/// <summary>
 	/// Calculates the initial offsets of each reference point

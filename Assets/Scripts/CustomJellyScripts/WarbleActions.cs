@@ -10,6 +10,7 @@ public class WarbleActions : MonoBehaviour
     public float Speed = 200f;
     public LayerMask GroundLayer; //= LayerMask.GetMask("Floor");
     public ShockController Lightning;
+    public BurrowController Burrowing;
     public Vector2 ForwardMovementDirection { get { return moveDirection; } set { moveDirection = value; pushToFloor = -Vector2.Perpendicular(value); UpVector = -pushToFloor; } }
     public Vector2 UpVector { get; private set; }
     public bool PauseActions { get; set; }
@@ -37,7 +38,7 @@ public class WarbleActions : MonoBehaviour
     private float lastJumpTime;
     public void JumpTowards(Vector2 direction)
     {
-        if (PauseActions)
+        if (PauseActions || (Burrowing && Burrowing.Burried))
             return;
         if (Time.time - lastJumpTime < JumpDelay)
             return;
@@ -52,7 +53,7 @@ public class WarbleActions : MonoBehaviour
 
     public void Run(float input)
     {
-        if (PauseActions)
+        if (PauseActions || (Burrowing && Burrowing.Burried))
             return;
 
         if (input != 0f && IsGrounded())
@@ -89,6 +90,15 @@ public class WarbleActions : MonoBehaviour
             return;
 
         Lightning.Charge();
+    }
+
+    public void Burrow()
+    {
+        if (PauseActions)
+            return;
+
+        if(IsGrounded())
+            Burrowing.Hide();
     }
 
     public bool IsGrounded()

@@ -10,7 +10,6 @@ public class ShockController : MonoBehaviour, IDefense
     public float ChargeRefreshRate = 0.2f;
     public LayerMask ShockLayersOnContact;
 
-    public bool Invincible { get { return Charging; } }
     bool Charging { get { return Time.time - lastCharge < ChargeRefreshRate; } }
     bool ShockReady { get { return Time.time - lastShockTime > ShockRestTime; } }
 
@@ -18,9 +17,9 @@ public class ShockController : MonoBehaviour, IDefense
     private float lastShockTime;
     
 
-    private void Awake()
+    public bool DefendedAgainst(GameObject attacker)
     {
-        
+        return attacker.tag == "Shockable" && Charging;
     }
 
     private void Update()
@@ -58,7 +57,7 @@ public class ShockController : MonoBehaviour, IDefense
                 var death = toDestory.GetComponent<DeathController>();
                 if (death)
                 {
-                    death.KillGameObject();
+                    death.KillGameObject(gameObject);
                 }
 
                 lastShockTime = Time.time;

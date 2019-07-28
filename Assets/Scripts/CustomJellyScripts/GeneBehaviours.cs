@@ -44,4 +44,8 @@ public class GeneBehaviours : MonoBehaviour
         actions.ChargeShock();
     }
 
+    public void Burrow()
+    {
+        actions.Burrow();
+    }
 }

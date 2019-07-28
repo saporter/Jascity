@@ -12,15 +12,16 @@ public class DeathController : MonoBehaviour
     {
         defenses = new List<IDefense>
         {
-            GetComponent<ShockController>()
+            GetComponent<ShockController>(),
+            GetComponent<BurrowController>()
         };
     }
 
-    public bool KillGameObject()
+    public bool KillGameObject(GameObject attacker)
     {
         foreach(IDefense d in defenses)
         {
-            if(d.Invincible)
+            if(d != null && d.DefendedAgainst(attacker))
             {
                 return false;
             }
@@ -35,7 +36,7 @@ public class DeathController : MonoBehaviour
     {
         if (KilledByContactWithLayers == (KilledByContactWithLayers | (1 << collision.Collision2D.gameObject.layer)))
         {
-            KillGameObject();
+            KillGameObject(collision.Collision2D.gameObject);
         }
     }
 }

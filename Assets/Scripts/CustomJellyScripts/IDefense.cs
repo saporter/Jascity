@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IDefense 
 {
-    bool Invincible { get; }
+    bool DefendedAgainst(GameObject attacker);
 }
