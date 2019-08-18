@@ -12,10 +12,6 @@ public class ChangeColorOnMouse : MonoBehaviour
     private void Awake()
     {
         r = GetComponent<SpriteRenderer>();
-    }
-
-    private void Start()
-    {
         startColor = r.color;
     }
 

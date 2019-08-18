@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public WarblesReactToThis MouseTrigger;
     public Light MouseSpotLight;
     public CageManager WarbleCageManager;
+    public BreederController WarbleBreedController;
     public GameState CurrentGameState { get { return currentGameState; } }
     public bool HasSpotLight { get; set; }
     public Transform CavePosition;

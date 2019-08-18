@@ -20,4 +20,21 @@ public class CageManager : MonoBehaviour
 
         return false;
     }
+
+    /***
+     * Return Vector3.zero if no open positions... so don't put a cage at that position.
+     * */
+    public Vector3 NextOpenPosition()
+    {
+        for (int i = 0; i < Cages.Length; ++i)
+        {
+            var controller = Cages[i].GetComponentInChildren<CageController>();
+            if (controller.Warble == null)
+            {
+                return Cages[i].position;
+            }
+        }
+
+        return Vector3.zero;
+    }
 }

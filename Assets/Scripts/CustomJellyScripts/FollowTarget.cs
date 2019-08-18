@@ -19,7 +19,7 @@ public class FollowTarget : MonoBehaviour
         GameManager.Instance.GameStateChange.AddListener(StopFollowing);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Target == null)
             return;

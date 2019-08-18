@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Genes : MonoBehaviour
 {
-    public Gene[] genes;
-
+    public Gene[] GeneSequence { get { return genes; } }
+    Gene[] genes;
+    
     LoadBehaviours load;
     GeneBehaviours controller;
+    bool useLoadBehaviorComponent = true;
 
     private void Awake()
     {
@@ -17,6 +19,9 @@ public class Genes : MonoBehaviour
 
     private void Start()
     {
+        if (!useLoadBehaviorComponent)
+            return;
+
         genes = new Gene[load.Size];
         for(int i = 0; i < genes.Length; ++i)
         {
@@ -24,6 +29,12 @@ public class Genes : MonoBehaviour
                 leftHalf = GeneBuilder.MakeAllele(load.leftBehaviours[i], load.leftDominance[i]),
                 rightHalf = GeneBuilder.MakeAllele(load.rightBehaviours[i], load.rightDominance[i]) };
         }
+    }
+
+    public void SetGenes(Gene[] newGenes)
+    {
+        useLoadBehaviorComponent = false;
+        genes = newGenes;
     }
 
     public void ExpressGeneBehaviour(int geneIndex, Vector2 targetPosition)
