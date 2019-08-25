@@ -5,6 +5,8 @@ using UnityEngine;
 public class SwitchController : MonoBehaviour
 {
     public static List<SwitchController> AllSwitches;
+    public static int SwitchesOnCount { get { return numberSwitchedOn; } }
+
     private static int numberSwitchedOn = 0;
     private static SwitchController lastSwitch;
 
@@ -65,14 +67,7 @@ public class SwitchController : MonoBehaviour
             lastSwitch.Toggle();
         }
 
-        if(numberSwitchedOn == 2)
-        {
-            GameManager.Instance.WarbleBreedController.ToggleButtonOn();
-        }
-        else
-        {
-            GameManager.Instance.WarbleBreedController.ToggleButtonOff();
-        }
+        GameManager.Instance.WarbleBreedController.ToggleButton();
 
         lastSwitch = this;
     }

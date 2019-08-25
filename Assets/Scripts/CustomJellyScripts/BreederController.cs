@@ -13,7 +13,15 @@ public class BreederController : MonoBehaviour
         HelperTools.ToggleOff(Button_CG);
     }
 
-    public void ToggleButtonOn()
+    public void ToggleButton()
+    {
+        if (SwitchController.SwitchesOnCount == 2)
+            ToggleButtonOn();
+        else
+            ToggleButtonOff();
+    }
+
+    private void ToggleButtonOn()
     {
         transform.position = GameManager.Instance.WarbleCageManager.NextOpenPosition();
         if (transform.position != Vector3.zero)
@@ -24,7 +32,7 @@ public class BreederController : MonoBehaviour
         ToggleButtonOff();
     }
 
-    public void ToggleButtonOff()
+    private void ToggleButtonOff()
     {
         HelperTools.ToggleOff(Button_CG);
     }
@@ -38,7 +46,7 @@ public class BreederController : MonoBehaviour
         warble.GetComponent<Genes>().SetGenes(child);
         warble.transform.position = transform.position;
 
-        StartCoroutine(UpdateButtonIn(0.1f));
+        // Turning off or moving button will be handled by cage controller 
     }
 
     private Genes[] GetParentGenes()
@@ -82,9 +90,4 @@ public class BreederController : MonoBehaviour
         return child;
     }
 
-    private IEnumerator UpdateButtonIn(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-        ToggleButtonOn();
-    }
 }

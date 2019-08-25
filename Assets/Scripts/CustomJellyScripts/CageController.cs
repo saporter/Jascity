@@ -37,6 +37,8 @@ public class CageController : MonoBehaviour
         LaunchButton.interactable = true;
         KillButton.interactable = true;
         Switch.Enable(true);
+
+        GameManager.Instance.WarbleBreedController.ToggleButton();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -44,6 +46,8 @@ public class CageController : MonoBehaviour
         LaunchButton.interactable = false;
         KillButton.interactable = false;
         Switch.Enable(false);
+
+        GameManager.Instance.WarbleBreedController.ToggleButton();
     }
 
     public void OpenDoors()
