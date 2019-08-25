@@ -77,6 +77,7 @@ public class CageController : MonoBehaviour
     {
         GameObject.Destroy(warble.gameObject);
         warble = null;
+        GameManager.Instance.WarbleBreedController.ToggleButton();
         KillParticleEffect.Play();
     }
 

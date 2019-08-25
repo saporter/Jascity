@@ -8,25 +8,68 @@ public class BreederController : MonoBehaviour
     public GameObject WarblePrefab;
     public CanvasGroup Button_CG;
 
+    private CageController currentCage;
+    private CageController lastUsedCage;
+    private IEnumerator breedCoroutine;
+    private IEnumerator killCorountine;
+
     private void Start()
     {
+        GameManager.Instance.GameStateChange.AddListener(HotkeyGameStateListener);
         HelperTools.ToggleOff(Button_CG);
     }
 
     public void ToggleButton()
     {
         if (SwitchController.SwitchesOnCount == 2)
+        {
+            if(killCorountine == null)
+            {
+                killCorountine = ListenForKill();
+                StartCoroutine(killCorountine);
+            }
             ToggleButtonOn();
+        }
         else
+        {
+            StopKillCoroutine();
             ToggleButtonOff();
+        }
+    }
+
+    private void StopKillCoroutine()
+    {
+        lastUsedCage = null;
+        if (killCorountine != null)
+        {
+            StopCoroutine(killCorountine);
+            killCorountine = null;
+        }
+    }
+
+    private void StopBreedCoroutine()
+    {
+        if (breedCoroutine != null)
+        {
+            StopCoroutine(breedCoroutine);
+            breedCoroutine = null;
+        }
     }
 
     private void ToggleButtonOn()
     {
-        transform.position = GameManager.Instance.WarbleCageManager.NextOpenPosition();
-        if (transform.position != Vector3.zero)
+        CageController cage = GameManager.Instance.WarbleCageManager.NextOpenCage();
+        if (cage != null)
         {
+            transform.position = cage.transform.position;
+            currentCage = cage;
             HelperTools.ToggleOn(Button_CG);
+            
+            if (breedCoroutine == null)
+            {
+                breedCoroutine = ListenForBreed();
+                StartCoroutine(breedCoroutine);
+            }
             return;
         }
         ToggleButtonOff();
@@ -34,13 +77,45 @@ public class BreederController : MonoBehaviour
 
     private void ToggleButtonOff()
     {
+        currentCage = null;
+        StopBreedCoroutine();
         HelperTools.ToggleOff(Button_CG);
+    }
+
+    IEnumerator ListenForBreed()
+    {
+        while(true)
+        {
+            if (Input.GetButtonUp("Breed"))
+            {
+                BreedTwoActiveWarbles();
+            }
+            yield return null;
+        }
+    }
+
+    IEnumerator ListenForKill()
+    {
+        while(true)
+        {
+            if (Input.GetButtonUp("Kill"))
+            {
+                if (lastUsedCage != null && lastUsedCage.Warble != null)
+                {
+                    lastUsedCage.KillWarble();
+                    lastUsedCage = null;
+                    ToggleButton();
+                }
+            }
+            yield return null;
+        }
     }
 
     public void BreedTwoActiveWarbles()
     {
         Genes[] parents = GetParentGenes();
         Gene[] child = MakeChildGenes(parents);
+        lastUsedCage = currentCage;
 
         GameObject warble = GameObject.Instantiate(WarblePrefab);
         warble.GetComponent<Genes>().SetGenes(child);
@@ -88,6 +163,28 @@ public class BreederController : MonoBehaviour
         }
 
         return child;
+    }
+
+    private void HotkeyGameStateListener(GameState state)
+    {
+        switch(state)
+        {
+            case GameState.Lab:
+                ToggleButton();
+                break;
+            default:
+                StopKillCoroutine();
+                StopBreedCoroutine();
+                break;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if(GameManager.Instance != null)
+        {
+            GameManager.Instance.GameStateChange.RemoveListener(HotkeyGameStateListener);
+        }
     }
 
 }

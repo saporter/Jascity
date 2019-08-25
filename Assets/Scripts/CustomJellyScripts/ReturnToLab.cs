@@ -44,7 +44,7 @@ public class ReturnToLab : MonoBehaviour
 
         while (listening)
         {
-            var exit = Input.GetAxis("Submit");
+            var exit = Input.GetAxis("Return");
             if (exit != 0)
             {
                 HelperTools.ToggleOn(textCG);
