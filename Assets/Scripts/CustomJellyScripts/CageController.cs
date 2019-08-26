@@ -11,6 +11,7 @@ public class CageController : MonoBehaviour
     public Rigidbody2D RightHatch;
     public SwitchController Switch;
     public ParticleSystem KillParticleEffect;
+    public DNAUIController DNAController;
 
     public MovementController Warble { get { return warble; } }
 
@@ -32,6 +33,7 @@ public class CageController : MonoBehaviour
         if (movement != null)
         {
             warble = movement;
+            DNAController.WarbleAdded(warble.GetComponent<Genes>().GeneSequence);
         }
 
         LaunchButton.interactable = true;
@@ -46,7 +48,7 @@ public class CageController : MonoBehaviour
         LaunchButton.interactable = false;
         KillButton.interactable = false;
         Switch.Enable(false);
-
+        DNAController.DeleteCurrentDisplay();
         GameManager.Instance.WarbleBreedController.ToggleButton();
     }
 

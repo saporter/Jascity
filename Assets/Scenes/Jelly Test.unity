@@ -5535,17 +5535,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
+      propertyPath: leftBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightDominance.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
       propertyPath: leftBehaviours.Array.data[0]
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
       propertyPath: rightDominance.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
       propertyPath: rightBehaviours.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftBehaviours.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftBehaviours.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightDominance.Array.data[2]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780173, guid: 9b3668f295c09254d85745181ce04abc,
@@ -53651,18 +53711,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
+      propertyPath: leftBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightDominance.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
       propertyPath: leftBehaviours.Array.data[0]
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
       propertyPath: rightDominance.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
       propertyPath: rightBehaviours.Array.data[0]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftBehaviours.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftBehaviours.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightBehaviours.Array.data[2]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: rightDominance.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985525357689780164, guid: 9b3668f295c09254d85745181ce04abc,
+        type: 3}
+      propertyPath: leftDominance.Array.data[0]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8985525357689780173, guid: 9b3668f295c09254d85745181ce04abc,
         type: 3}
