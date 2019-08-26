@@ -10,12 +10,11 @@ public class SwitchController : MonoBehaviour
     private static int numberSwitchedOn = 0;
     private static SwitchController lastSwitch;
 
-    public KeyCode MyNumber = KeyCode.Alpha1;
+    public string InputAxis;
     public Color OffColor = Color.gray;
     public CageController Cage;
     public bool On { get { return turnedOn; } }
 
-    KeyCode AltNumber;  // the numberpad
     Color OnColor;
     bool turnedOn = true;
     SpriteRenderer r;
@@ -23,8 +22,6 @@ public class SwitchController : MonoBehaviour
 
     private void Awake()
     {
-        int diff = (int)(KeyCode.Keypad1 - KeyCode.Alpha1);
-        AltNumber = MyNumber + diff;
         anim = GetComponent<Animator>();
         r = GetComponent<SpriteRenderer>();
         OnColor = r.color;
@@ -41,7 +38,7 @@ public class SwitchController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(MyNumber) || Input.GetKeyUp(AltNumber))
+        if (Input.GetButtonUp(InputAxis))
         {
             Toggle();
         };

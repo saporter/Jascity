@@ -4968,6 +4968,11 @@ PrefabInstance:
       propertyPath: MyNumber
       value: 49
       objectReference: {fileID: 0}
+    - target: {fileID: 5868312344507031560, guid: 964c720c543728049bc1d758d2d6e7c6,
+        type: 3}
+      propertyPath: InputAxis
+      value: One
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964c720c543728049bc1d758d2d6e7c6, type: 3}
 --- !u!4 &238015086 stripped
@@ -8238,6 +8243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MyNumber
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868312344507031560, guid: 964c720c543728049bc1d758d2d6e7c6,
+        type: 3}
+      propertyPath: InputAxis
+      value: Two
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964c720c543728049bc1d758d2d6e7c6, type: 3}
@@ -28935,6 +28945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MyNumber
       value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868312344507031560, guid: 964c720c543728049bc1d758d2d6e7c6,
+        type: 3}
+      propertyPath: InputAxis
+      value: Three
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964c720c543728049bc1d758d2d6e7c6, type: 3}
@@ -53992,6 +54007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: MyNumber
       value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868312344507031560, guid: 964c720c543728049bc1d758d2d6e7c6,
+        type: 3}
+      propertyPath: InputAxis
+      value: Four
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964c720c543728049bc1d758d2d6e7c6, type: 3}
